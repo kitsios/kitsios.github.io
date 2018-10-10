@@ -4,6 +4,7 @@ function preload() {
     imgc = loadImage('carl.png');
   imgk = loadImage('keo.png');
 imgb = loadImage('back.png');
+imgg = loadImage('game.jpg');
   
 }
 
@@ -63,13 +64,8 @@ function draw() {
   x = width;
   y = random(50,450);
   lives -=1;}
-  if(lives <= 0){background (255,0,0);
-                 
-                 text('GAME OVER',180,250);
-				 text(score,260,280);}
-    
-  
-  if(xx>0){xx-=8;}
+  if(lives <= 0){background (imgg);}
+	if(xx>0){xx-=8;}
   else{xx = width;
        yy = random(50,450);
       }
