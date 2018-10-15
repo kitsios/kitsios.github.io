@@ -5,24 +5,25 @@ function preload() {
   imgk = loadImage('keo.png');
 imgb = loadImage('back.png');
 imgg = loadImage('game.jpg');
+ 
   
 }
 
 
 function setup() {
-  createCanvas(500, 500);
+  createCanvas(800, 800);
   xx = width/1.25;
 	yy = height/3;
-	ww = 15;
-	hh = 50;
+	ww = 20;
+	hh = 60;
 	x = width/2;
 	y = height/2;
-	w = 15;
-	h = 50;
+	w = 20;
+	h = 60;
   ex = 300;
   ey = 100;
-  ew = 100;
-  eh = 50;
+  ew = 140;
+  eh = 60;
   lives = 3;
   score = 0;
   bon = 0;
@@ -62,21 +63,29 @@ function draw() {
   y < ey + eh &&
   h + y > ey){
   x = width;
-  y = random(50,450);
-  lives -=1;}
-  if(lives <= 0){background (imgg);}
+  y = random(50,750);
+  lives -=1;
+   }
+  if(lives <= 0){background (imgg);
+					noLoop();
+					textSize(70);
+					fill(255,255,0);
+					text(score,width/2-35,height/1.4);
+  
+					}
 	if(xx>0){xx-=8;}
   else{xx = width;
-       yy = random(50,450);
+       yy = random(50,750);
       }
   if (xx < ex + ew &&
   xx + ww > ex &&
   yy < ey + eh &&
   hh + yy > ey){
   xx = width;
-  yy = random(50,450);
+  yy = random(50,750);
   score += 1;
   bon +=1;
+
   }
   if(score >=10)
   { x -= 1;
