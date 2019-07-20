@@ -56,7 +56,7 @@ function draw() {
   line(0,10,30,500);
   if(x>0){x-=8;}
   else{x = width;
-       y = random(50,450);
+       y = random(50,750);
       }
   if (x < ex + ew &&
   x + w > ex &&
